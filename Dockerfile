@@ -3,7 +3,7 @@ MAINTAINER Andreas Peters <mailbox@andreas-peters.net>
 
 WORKDIR /
 ENV DEBIAN_FRONTEND=noninteractive
-ENV CERTBOT_VERSION=0.15.x
+ENV CERTBOT_VERSION=v0.28.0
 RUN apt-get update \
   && apt-get install -y unzip curl python-pip python \
   && pip install --upgrade pip \
