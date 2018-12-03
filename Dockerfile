@@ -1,13 +1,15 @@
-FROM debian:jessie
+FROM debian:latest
+MAINTAINER Andreas Peters <mailbox@andreas-peters.net>
 
 WORKDIR /
 ENV DEBIAN_FRONTEND=noninteractive
-ENV CERTBOT_VERSION=0.8.1
+ENV CERTBOT_VERSION=0.15.x
 RUN apt-get update \
-  && apt-get install -y unzip curl python-pip \
+  && apt-get install -y unzip curl python-pip python \
   && pip install --upgrade pip \
-  && pip install virtualenv --upgrade \
-  && curl -Ls -o /certbot.zip https://github.com/certbot/certbot/archive/v${CERTBOT_VERSION}.zip \
+  && pip install virtualenv --upgrade  \
+#  && pip install cryptography --upgrade \
+  && curl -Ls -o /certbot.zip https://github.com/certbot/certbot/archive/${CERTBOT_VERSION}.zip \
   && unzip certbot.zip \
   && mv certbot-${CERTBOT_VERSION} certbot \
   && cd certbot \
