@@ -1,4 +1,8 @@
-# Let's Encrypt DC/OS!
+# Fork of Let's Encrypt for Mesosphere Marathon!
+
+We create this for get a fresh update of certbot. The image is based now on the certbot original image.
+
+---
 
 This is a sample [Marathon](https://github.com/mesosphere/marathon) app for encrypting your [Marathon-lb](https://github.com/mesosphere/marathon-lb) HAProxy endpoints using [Let's Encrypt](https://letsencrypt.org/). With this, you can automatically generate and renew valid SSL certs with Marathon-lb.
 
