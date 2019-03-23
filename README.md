@@ -1,6 +1,6 @@
 # Fork of Let's Encrypt for Mesosphere Marathon!
 
-We create this for get a fresh update of certbot. The image is based now on the certbot original image.
+We create this fork to get a fresh update of certbot. The image is based now on the certbot original image.
 
 ---
 
