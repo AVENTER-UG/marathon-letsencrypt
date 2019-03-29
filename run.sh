@@ -2,7 +2,7 @@
 set -e
 
 # Wait to settle
-sleep 15
+sleep 50
 
 
 # Get our SSL domains from the Marathon app label
@@ -30,6 +30,7 @@ echo "Running certbot-auto to generate initial signed cert"
   --email $LETSENCRYPT_EMAIL --agree-tos --noninteractive --no-redirect \
   --rsa-key-size 4096 --expand
 
+cat /var/log/letsencrypt/letsencrypt.log
 
 while [ true ]; do
   cat /etc/letsencrypt/live/$DOMAIN_FIRST/fullchain.pem \
