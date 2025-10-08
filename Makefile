@@ -2,7 +2,7 @@
 #vars
 IMAGENAME=marathon-letsencrypt
 REPO=avhost
-TAG=v5.0.0
+TAG=v5.0.1
 BRANCH=${TAG}
 BRANCHSHORT=$(shell echo ${BRANCH} | awk -F. '{ print $$1"."$$2 }')
 BUILDDATE=$(shell date -u +%Y%m%d)
